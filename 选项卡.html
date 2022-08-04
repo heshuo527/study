@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>选项卡</title>
+    <style>
+        .img {
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <button class="zxy">第一张</button>
+    <button class="ldh">第二张</button><br>
+    <img src="" class="yi" title="">
+    <script>
+        var e = function(selector) {
+            return document.querySelector(selector)
+        }
+        var zxy = e('.zxy')
+        var ldh = e('.ldh')
+        var img = e('.yi')
+        zxy.onclick = function() {
+            img.src = '1.jpg'
+            img.title = '第一张图'
+        }
+        ldh.onclick = function() {
+            img.src = '3.jpg'
+            img.title = '第二张图'
+        }
+    </script>
+</body>
+</html>

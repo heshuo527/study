@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 第一种是通过id来选择元素 -->
+    <div id="value">111</div>
+    <div class="active">2222222</div>
+    <div>
+        <strong></strong>
+    </div>
+    <input name="baby">
+
+    
+    <script type="text/javascript">
+        //id选择器
+        var div = document.getElementById('value')
+
+        //第二种是标签名选择器,他们的数组都是个类数组，不能像array一样操作
+        //只有部分标签name可以生效（表单，表单元素）
+        var div = document.getElementsByTagName('baby')[0]
+
+        var div = document.getElementsByName()
+
+        //class类名选择器
+        var div = document.getElementByClassName('div')[0]
+
+        //元素选择器
+        var div = document.querySelector('div')
+        var div = document.querySelectorAll()
+    </script>
+</body>
+</html>

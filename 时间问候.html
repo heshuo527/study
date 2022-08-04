@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <img src="1.gif" class="gua"><br>
+    <div>上午好</div>
+
+    <script>
+        var e = function(selector) {
+            return document.querySelector(selector)
+        }
+        var img = e('.gua')
+        var div = e('div')
+        var date = new Date()
+        var h = date.getHours()
+        
+        function newdate(h) {
+            if(h < 12) {
+                div.innerHTML = '上午好，该学习了'
+            } else if(h < 18) {
+                div.innerHTML = '下午好，该学习了'
+            } else {
+                div.innerHTML = '晚上好，该学习了'
+            }
+            console.log(h)
+        }
+        newdate(h)
+
+    </script>
+</body>
+</html>

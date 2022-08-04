@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: relative;
+            width: 250px;
+            text-align: center;
+            vertical-align: middle;
+            border: 1px solid rgb(239, 239, 239);
+            margin: 100px auto;
+        }
+        .inp2 {
+            width: 200px;
+            height: 40px;
+            border: 0;
+            outline: none;
+        }
+        .img{
+            position: absolute;
+            top: 30px;
+            right: 25px;
+            width: 15px;
+            height: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <label for="inp1">账号</label>
+        <input id='inp1' type="text" value=""><br>
+
+        <label for="inp2">密码</label>
+        <img src="1.gif" class="img">
+        <input id='inp2' type="password" value=""><br>
+        <button class="but">确认</button>
+
+        <script>
+            var inp1 = document.querySelector('#inp1')
+            var inp2 = document.querySelector('#inp2')
+            var but = document.querySelector('.but')
+            var img = document.querySelector('.img')
+            var flag = 0
+            img.onclick = function() {
+                if(flag == 0) {
+                    img.src = '微信图片_20220728160302.jpg'
+                    inp2.type = 'text'
+                    flag = 1
+                } else {
+                    img.src = '1.gif'
+                    inp2.type = 'password'
+                    flag = 0
+                }
+            }
+            
+        </script>
+    </div>
+    
+</body>
+</html>

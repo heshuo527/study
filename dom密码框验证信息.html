@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 600px;
+            margin: 100px auto;
+
+        }
+        .message {
+            display: inline-block;
+            font-size: 12px;
+            color: #999;
+            background: url(1.gif) no-repeat left center;
+            padding-left: 20px;
+        }
+        .gua {
+            color: red;
+        }
+        .blue {
+            color: rgb(18, 220, 68);
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" class="int">
+        <p class="message">请输入6~16位密码</p>
+    </div>
+    <script>
+        var inp = document.querySelector('.int')
+        var message = document.querySelector('.message')
+        inp.onblur = function() {
+            if(this.value.length == 0) {
+                message.className = 'message'
+                message.innerHTML = '请输入6~16位密码'
+                console.log('111');
+            } else if(this.value.length < 6 || this.value.length > 16) {
+                message.innerHTML = '请输入6~16位密码'
+                message.className = 'message gua'
+                message.innerHTML = '密码错误'
+                console.log('222');
+            } else {
+                message.className = 'message blue'
+                message.innerHTML = '密码正确'
+                console.log('333');
+            }
+        }
+    </script>
+    
+</body>
+</html>
